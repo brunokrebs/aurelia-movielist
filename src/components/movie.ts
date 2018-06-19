@@ -1,8 +1,9 @@
-import { bindable } from 'aurelia-framework';
+import { autoinject, bindable } from 'aurelia-framework';
 import { Movie as MovieModel } from 'moviedb-promise';
-import { WatchlistManager } from './../watchlist-manager';
-import { AuthService } from './../auth-service';
+import { WatchlistManager } from '../watchlist-manager';
+import { AuthService } from '../auth-service';
 
+@autoinject
 export class Movie {
   @bindable model: MovieModel;
   isHovering = false;
